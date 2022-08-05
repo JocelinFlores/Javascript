@@ -1,0 +1,52 @@
+<html>
+<head>
+<title>PESO DE LOS PLANETAS</title>
+<style>
+body
+{
+  background-color: INDIGO;
+}
+strong
+{
+  color: white;
+}
+</style>
+</head>
+<body>
+  <h2><strong>PESO EN OTROS PLANETAS<strong><h2>
+    <p>Es necesario ingresar tu peso<p>
+<script>
+
+alert ("Ingresar peso");
+var usuario = prompt("cual es tu peso");
+var planeta = prompt("Elige una opcion \n 1 MARTE, 2 JUPITER");
+var peso = parseInt (usuario);
+var g_tierra = 9.8;
+var g_marte = 3.7;
+var g_jupiter = 24.1;
+var nombre;
+var peso_final;
+
+if (planeta == 1)
+{
+  peso_final = peso * g_marte / g_tierra;
+  peso_final = parseInt (peso_final);
+  nombre = "marte";
+}
+
+else if (planeta == 2)
+{
+  peso_final = peso * g_jupiter / g_tierra;
+  peso_final = parseInt (peso_final);
+  nombre = "jupiter";
+}
+else
+{
+peso_final = 100000;
+nombre = "indefinido";
+}
+document.write(" El planeta que has elegido fue " + nombre );
+document.write(" \nEl peso en ese planeta es " + peso_final );
+      </script>
+  </body>
+</html>
